@@ -21,17 +21,17 @@ def main ():
     second_label.pack(fill = "x")
 
     topframe = Frame(win)
-    topframe.pack(side = "top")
+    topframe.pack(padx = "20", pady = "20", expand = 0)
 
     b1 = Button (topframe, text = "Window ", fg = "black", command = clickme )
     b2 = Button (topframe, text = "Button2", fg = "black", command = clickme )
     b3 = Button (topframe, text = "Button3", fg = "black", command = clickme )
     b4 = Button (topframe, text = "Button4", fg = "black", command = clickme )
 
-    b1.pack(side = "left")
-    b2.pack(side = "left")
+    b1.pack(padx = "10", pady = "10", side = "left")
+    b2.pack(side = "bottom")
     b3.pack(side = "left")
-    b4.pack(side = "left")
+    b4.pack(side = "bottom")
 
     win.mainloop()
 if __name__ == "__main__":
