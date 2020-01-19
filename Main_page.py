@@ -15,7 +15,7 @@ def winfun ():
 
     # read file is tuple
     tuple = file.read()
-    text = ' '.join(tuple)
+    text = ''.join(tuple)
 
     code_in_newwin = Label (newwin, text = text)
     code_in_newwin["bg"] = "#DBDAEA"
@@ -57,7 +57,7 @@ def framefun ():
 
     # read file is tuple
     tuple = file.read()
-    text = ' '.join(tuple)
+    text = ''.join(tuple)
 
     code_in_newwin = Label (newwin, text = text)
     code_in_newwin["bg"] = "#DBDCEA"
@@ -67,7 +67,7 @@ def framefun ():
     code_in_newwin["justify"] = "left"
     code_in_newwin.pack(pady = 20, padx = 20)
 
-def Butfun ():
+def butfun ():
     newwin = Tk()
     newwin.title("Example of Button")
     newwin.configure(background="#453421")
@@ -80,11 +80,39 @@ def Butfun ():
     click_but = Button(newwin, text = "Click Me", fg = "black", command = clickme)
     click_but.pack()
 
-    file = open ("new_frame.dat", "r")
+    file = open ("new_button.dat", "r")
 
     # read file is tuple
     tuple = file.read()
-    text = ' '.join(tuple)
+    text = ''.join(tuple)
+
+    code_in_newwin = Label (newwin, text = text)
+    code_in_newwin["bg"] = "#DBDCEA"
+    code_in_newwin["fg"] = "black"
+    code_in_newwin["pady"] = "10"
+    code_in_newwin["padx"] = "10"
+    code_in_newwin["justify"] = "left"
+    code_in_newwin.pack(pady = 20, padx = 20)
+
+def labelfun ():
+    newwin = Tk()
+    newwin.title("Example of Button")
+    newwin.configure(background="#453421")
+    name_in_newwin = Label (newwin, text = "This an example of a Label created by Tkinter in Python.")
+    name_in_newwin["fg"] = "white"
+    name_in_newwin["bg"] = "#453421"
+    name_in_newwin["padx"] = "10"
+    name_in_newwin["pady"] = "10"
+    name_in_newwin["font"] = "CMUsans 12"
+    name_in_newwin["bd"] = "1"
+    name_in_newwin["relief"] = "raised"
+    name_in_newwin.pack(pady = 10)
+
+    file = open ("new_label.dat", "r")
+
+    # read file is tuple
+    tuple = file.read()
+    text = ''.join(tuple)
 
     code_in_newwin = Label (newwin, text = text)
     code_in_newwin["bg"] = "#DBDCEA"
@@ -107,6 +135,7 @@ def main ():
     win = Tk()
 
     win.title("InfoSoft")
+    win.iconbitmap("main.ico")
     win.configure(background="#857E61")
 
     # create label
@@ -122,18 +151,16 @@ def main ():
     bottomframe = Frame(win)
     bottomframe.pack(pady = "20", side = "bottom")
 
-    b1 = Button (topframe, text = "Window ", fg = "black", command = winfun, relief = "raised", bd = "3" )
+    b1 = Button (topframe, text = "Window ", fg = "black", command = winfun, relief = "raised", bd = "3")
     b2 = Button (topframe, text = "Frame", fg = "black", command = framefun, relief = "raised", bd = "3")
-    b3 = Button (topframe, text = "Button", fg = "black", command = clickme )
-    b4 = Button (topframe, text = "Button3", fg = "black", command = clickme )
-    b5 = Button (topframe, text = "Button4", fg = "black", command = clickme )
+    b3 = Button (topframe, text = "Label", fg = "black", command = labelfun, relief = "raised", bd = "3")
+    b4 = Button (topframe, text = "Button", fg = "black", command = butfun, relief = "raised", bd = "3")
     exit_button = Button (bottomframe, text = "Exit", fg = "black", command = new_exit)
 
     b1.pack(padx = "10", pady = "10", side = "left")
     b2.pack(padx = "10", pady = "10", side = "left")
     b3.pack(padx = "10", pady = "10", side = "left")
     b4.pack(padx = "10", pady = "10", side = "left")
-    b5.pack(padx = "10", pady = "10", side = "left")
     exit_button.pack()
 
     win.mainloop()

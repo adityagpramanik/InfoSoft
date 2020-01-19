@@ -1,0 +1,14 @@
+from tkinter import *
+
+def main ():
+    newwin = Tk()
+    newwin.title("Example of Frame")
+    newwin.configure(background="white")
+
+    click_but = Button(newwin, text = "Click Me", fg = "black", command = your_fun)
+    click_but.pack()
+
+    newwin.mainloop()
+
+if __name__ == "__main__":
+    main()

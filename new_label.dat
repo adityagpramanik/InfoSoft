@@ -1,0 +1,18 @@
+from tkinter import *
+from tkinter import messagebox
+
+def main ():
+    win = Tk()
+
+    win.title("Window_Name")
+    win.configure(background="background_color")
+
+    name_in_newwin = Label (newwin, text = "This an example of a window created by Tkinter in Python.")
+    name_in_newwin["bg"] = "white"
+    name_in_newwin["fg"] = "black"
+    name_in_newwin["font"] = "CMUsans 12"
+    name_in_newwin.pack()
+
+    win.mainloop()
+if __name__ == "__main__":
+    main()
