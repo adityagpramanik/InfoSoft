@@ -1,0 +1,1 @@
+This software will you make you understand the functions and tools available in TKinter library which is itself used in Python to develop this software.
