@@ -1,2 +1,6 @@
 # InfoSoft
-This project is made for learning purpose only. It's is created by the use of Python programming language
+InfoSoft displays the code to build different components like window, frame, button etc using **TKinter library**.
+
+## Project files and folders
+- **License (Folder)** - Description of license type.
+- **__pycache__ (Folder)** - Cached files on running python application.

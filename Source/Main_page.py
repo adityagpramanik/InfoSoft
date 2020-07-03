@@ -10,7 +10,7 @@ def main ():
     win = Tk()
 
     win.title("InfoSoft")
-    win.iconbitmap("main.ico")
+    # win.iconbitmap("main.xbm")
     win.configure(background="#857E61")
 
     # create label
